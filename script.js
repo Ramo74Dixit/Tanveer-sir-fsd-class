@@ -1,199 +1,107 @@
-// let age =17
+// console.log(document);
+// console.log(window)
+// if we want to select a html element through id in that case we will use getElementById method 
 
-// if(age >= 18){
-//     console.log("You're an adult");
-// }else{
-//     console.log("You are a minor")
+// const title= document.getElementById("title")
+
+// console.log(title)
+
+// const elements= document.getElementsByTagName("h1");
+// console.log(elements)
+
+// const element=document.getElementsByClassName("title");
+// console.log(element)
+
+// const title = document.querySelectorAll("#title");
+// console.log(title)
+
+// const title=document.querySelector(".card h2")
+// title.innerText="My First Cart Value"
+// title.textContent="MY first content using textContent"
+// console.log(title.innerText)
+
+// const box= document.getElementById("box");,
+
+// iss box ke andar m ek html element create krna chahta hu 
+// box.innerHTML= `   <img src="https://media.istockphoto.com/id/1394440950/photo/natural-view-cosmos-filed-and-sunset-on-garden-background.jpg?s=612x612&w=0&k=20&c=eBnRobwsk2w_9MqM6bnXukIia5j-ayuMS0PeB6GHN0E=" alt="">`
+
+const box=document.getElementById("box");
+
+box.style.width="300px";
+box.style.height="200px";
+box.style.backgroundColor="yellow";
+box.style.border="2px solid red"
+
+
+const image= document.getElementById("image1");
+image.setAttribute("src","https://img.magnific.com/free-photo/close-up-full-bloom-flower_23-2151921043.jpg?semt=ais_test_b&w=740&q=80")
+
+image.removeAttribute("alt")
+console.log(image.getAttribute("alt"));
+
+const heading=document.createElement("h2")
+heading.textContent="Helllooo Javascript"
+document.body.prepend(heading)
+console.log(heading)
+
+const paragraph= document.createElement("p");
+paragraph.textContent="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia voluptatum magnam dolor excepturi commodi minima nemo vel rerum, odio tempore impedit nisi suscipit dolorum exercitationem voluptatibus pariatur maiores eos fugiat quod, eligendi aliquid enim deserunt repudiandae. Perspiciatis quaerat velit consequuntur!"
+
+box.prepend(paragraph)
+
+
+const list=document.getElementById("list");
+
+// const li=document.createElement("li");
+
+const items=["HTML","CSS","javascript"]
+ 
+items.forEach((item)=>{
+    const li=document.createElement("li");
+    li.textContent=item;
+    list.appendChild(li)
+})
+
+// body.removeChild(box)
+// list.appendChild(li)
+
+// const heading=document.getElementById("h1");
+// // heading.remove()
+// parent.removeChild(heading)
+
+// function sayHello(){
+//     alert("Heellloo how are you")
 // }
 
-// let marks = 55;
+// const button=document.getElementById("btn");
 
-// if(marks >=90){
-//     console.log("A+");
-// }else if(marks >=80){
-//     console.log("A");
-// }else if(marks >=70){
-//     console.log("B");
-// }else if(marks >=60){
-//     console.log("C");
-// }else{
-//     console.log("You're fail");
-// }
-
-//  Nested if - agar hmari phli condition shahi then dusri condition check krenge 
-
-// let age=15;
-// let haslicense= true;
-
-// if(age>=18){
-//     if(haslicense){
-//         console.log("You can drive");
-//     }else{
-//         console.log("you can not drive")
-//     }
-// }else{
-//     console.log("You are a minor")
-// }
-
-// let username={};
-// if(username){
-//     console.log("hello world");
-// }
-
-// let age=15;
-
-// let result = age>=18 ? "Adult" : age>=13? "Teenager" :"Minor"
-
-// console.log(result)
-
-// switch case - jab ek expression ki multiple fixed possible values hongi 
-
-// let day=2;
-
-// switch(day){
-//     case 1:
-//         console.log("Monday");
-//         break
-//     case 2:
-//         console.log("Tuesday");
-//         break
-//     case 3:
-//         console.log("Wednesday");
-//         break
-//     default:
-//         console.log("Invalid Day")
-// }
-
-// Switch Cases With Multiple Statements 
-
-// let day ="Sunday";
-
-// switch(day){
-//     case "Saturday" : case "Sunday":
-//         console.log("Weekend");
-//         break
-//     default:
-//         console.log("WeekDay")
-// }
-
-// for(let i=2;i<=100;i+=2){
-//     console.log(i);
-// }
-
-// let i=1;
-// while(i<=5){
-//     ++i;
-//     console.log(i);
-// // }
-
-// do while - jab hmko atleast ek bar code ko execute krna h then we wil use do while 
-
-// let i=10;
-// do{
-//     console.log(i);
-//     i++;
-// }while(i<5)
-
-// break - agar hmko loop ya conditionals me kuch bhi immediately stop krna h then we wil use break 
-
-// continue - current iteration ko skip krana h then we will use continue .
-
-// for(let i=1;i<=5;i++){
-//     if(i==3){
-//         continue;
-//     }
-//     console.log(i);
-// }
-
-// break - agar hmko loop ya conditionals me kuch bhi immediately stop krna h then we wil use break 
-
-// continue - current iteration ko skip krana h then we will use continue .
-
-// for(let i=1;i<=5;i++){
-//     if(i==3){
-//         continue;
-//     }
-//     console.log(i);
-// }
-
-// arrays 
-
-// jab bhi kabhi ek variable ke andar multiple values ko store krna hoga then we will use array . 
-// Zero based indexing
-
-// const fruits = ["Apple","mango","banana"]
-
-// Methods in Array 
-
-// Array Length -
-
-// console.log(fruits.length)
-
-// when we want to update value of array
-
-// fruits[1]="Papaya"
-
-// console.log(fruits)
-
-// array ke elements ki value ko mutate kr sakte h 
-
-// const fruits =["Apple"]
-
-// // we can not directly change its value
-// fruits=["Banana"] 
-
-const fruits= ["Apple","Mango"]
-
-// push() method will be used to push at end 
-
-// fruits.push("Banana");
-
-// console.log(fruits)
-
-// Pop method()- last element ko remove krna h 
-
-// let removed=fruits.pop()
-// console.log(fruits);
-// console.log(removed);
-// unshift method - it will be used to insert at beginning 
-
-// fruits.unshift("Orange")
-// console.log(fruits)
-
-// shift method - it will be used to remove from starting 
-// let first = fruits.shift()
-// console.log(first);
-// console.log(fruits);
-
-// slice method -
-// actual value me change nahi krega 
-// slice(starting index,end ). -(1,4)-> 1->3 (4,8)-> 4 -> 7
-// const numbers=["Ram","Shyam","Sachin","Pankaj"];
-// const result= numbers.slice(1,4);
-// splice method 
-// console.log(result)
-// numbers.splice(1,2)
-// console.log(numbers)
-
-// includes() method - check whether value exist or not 
-// IndexOf() method
-// console.log(numbers.indexOf("Pankajiii"))
-// if we want to convert this complete array into 
-// string 
-
-// console.log(numbers.join(""))
-
-// const a=[1,2];
-// const b=[3,4];
-
-// const result = a.concat(b);
-
-// console.log(result)
-
-// const numbers =[10,20,30];
-
-// foreach method -jab hmko hr ek element pe koi function execute krna hoga
-
-// numbers.forEach(function (number){
-//     console.log(number*2);
+// button.addEventListener("click",(event)=>{
+//     // alert("Button hover kr di gyi h")
+//     console.log(event.target);
 // })
+
+// const image= document.getElementById("image")
+
+// image.addEventListener("mouseover",()=>{
+//     alert("image par mourse hover kiya gya h");
+
+// })
+
+const input=document.getElementById("input");
+
+input.addEventListener("input",(event)=>{
+    console.log(event.target.value)
+})
+
+const btn1=document.getElementById("btn1");
+
+const form= document.getElementsByName("form");
+
+btn1.addEventListener("submit",(event)=>{
+    event.preventDefault();
+    console.log("Form handled by javascript")
+    if(vaue === ""){
+        console.log("name is required")
+    }
+})
+
